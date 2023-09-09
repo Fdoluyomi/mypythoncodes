@@ -1,0 +1,21 @@
+
+ Kent Brdge is burining down	 Dartford Brdge is burining down
+
+
+ String "James "  ,"34555"
+ integer  200
+ Float  eg 3.33
+ Boolean  true or false
+
+ Sequence  list,tuple, range
+
+ List fruits=["Banana","oranges"]
+ fruits[0]= Banana
+ fruits[1]
+
+ sweetfruits =("Apple","Banana","Orange","Kiwi")
+ sweetfruits[0]=Apple
+
+ sweetfruits[-1]=Kiwi
+
+ sweetfruits[1:3]  =("Banana","Orange","Kiwi")
