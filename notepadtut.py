@@ -3,9 +3,7 @@ from tkinter import filedialog
 
 
 def donothing():
-# filewin=tk.Toplevel(root)
-# button= tk.Button(filewin,text='Dont do anythin')
-# button.pack()
+
  pass
 
 def close():
@@ -14,18 +12,25 @@ def close():
 
 def open():
  # tk.fi
-  fd = filedialog.askopenfile(parent = root, mode = 'r')
-  content= fd.read()
-  
-  entry.insert(0,content)
+    fd=tk.filedialog.askopenfile(mode='r')
+    t=fd.read()
+    entry.delete(0.0,tk.END)
+    entry.insert('1.0', t)
+
+   
+   # if fd:
+     #  with open() as f:
+    #    entry.insert(1.0,f.read())
 
 def new():
-  entry.delete(0,8)
+  entry.delete(0.0,tk.END)
 
 def save():
- fd=filedialog.asksaveasfile(mode='w',defaultextension='.txt')
- content=entry.get()
- fd.write(content)
+  fd=filedialog.asksaveasfile(mode='w',defaultextension='.txt')
+  content=entry.get('1.0', tk.END)
+  fd.write(content)
+ 
+ 
 
 def copy():
  pass
@@ -45,7 +50,7 @@ menubar=tk.Menu(root)
 filemenu=tk.Menu(menubar,tearoff=0)
 filemenu.add_command(label='New',command=new)
 filemenu.add_command(label='Open',command=open)
-filemenu.add_command(label='Save', command=save)
+filemenu.add_command(label='Save As', command=save)
 filemenu.add_separator()
 filemenu.add_command(label='Exit', command=root.quit)
 
@@ -61,8 +66,11 @@ menubar.add_cascade(label="Edit",menu=edit)
 
 root.config(menu=menubar)
 
-entry=tk.Entry( width=200,highlightbackground="black",highlightcolor="black")
-entry.grid(row=0,column=0,columnspan=4,rowspan=20)
+entry=tk.Text(root)
+entry.pack()
+#
+##entry=tk.Entry( width=200,highlightbackground="black",highlightcolor="black")
+#entry.grid(row=0,column=0,columnspan=4,rowspan=20)
 root.mainloop()                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
 
 
