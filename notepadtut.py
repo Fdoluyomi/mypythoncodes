@@ -11,16 +11,13 @@ def close():
 
 
 def open():
- # tk.fi
+
     fd=tk.filedialog.askopenfile(mode='r')
     t=fd.read()
     entry.delete(0.0,tk.END)
     entry.insert('1.0', t)
 
-   
-   # if fd:
-     #  with open() as f:
-    #    entry.insert(1.0,f.read())
+
 
 def new():
   entry.delete(0.0,tk.END)
@@ -68,9 +65,7 @@ root.config(menu=menubar)
 
 entry=tk.Text(root)
 entry.pack()
-#
-##entry=tk.Entry( width=200,highlightbackground="black",highlightcolor="black")
-#entry.grid(row=0,column=0,columnspan=4,rowspan=20)
+
 root.mainloop()                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
 
 
