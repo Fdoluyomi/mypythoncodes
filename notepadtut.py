@@ -42,8 +42,6 @@ icon=tk.PhotoImage(file='notepadlogo.png')
 root.iconphoto(True,icon)
 
 menubar=tk.Menu(root)
-
-
 filemenu=tk.Menu(menubar,tearoff=0)
 filemenu.add_command(label='New',command=new)
 filemenu.add_command(label='Open',command=open)
