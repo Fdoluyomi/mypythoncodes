@@ -83,3 +83,6 @@ print(b(40))
 for number in numbers:
     b=lambda number:number*2
     print(b(number))
+
+
+#create a lambda function to divide two numbers and subtract two numbers
